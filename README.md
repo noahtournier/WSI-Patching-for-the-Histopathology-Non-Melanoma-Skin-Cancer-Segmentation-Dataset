@@ -64,7 +64,11 @@ The annotations `.json` file lists the classes present in each patch for a given
       }, ... ]
  }
 ```
-
+### Description of the flags
+- `--cancer_priority`: When enabled, prioritizes cancer classes in the labeling of patches containing multiple classes.
+- `--patch_level`: Sets the resolution level of the patches (options: 1x, 2x, 5x, or 10x).
+- `--keep_mask`: Boolean flag to save a separate directory containing the corresponding mask patches.
+- `--keep_background`: Boolean flag indicating whether to include background patches in the output.
 # Description of the dataset
 All of the information bellow can be found on the [dataset page](https://espace.library.uq.edu.au/view/UQ:8be4bd0). For easy to use purposes it has been copied on this page.
 
