@@ -1,0 +1,1 @@
+# WSI-Patching-for-the-Histopathology-Non-Melanoma-Skin-Cancer-Segmentation-Dataset
