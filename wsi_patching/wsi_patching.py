@@ -36,8 +36,8 @@ def main():
     if not os.path.exists(folder_name):
         os.mkdir(folder_name)
     
-    initial_dataset_Images = os.path.join(args.source, args.patch_level,'Images')
-    initial_dataset_Masks = os.path.join(args.source, args.patch_level,'Masks')
+    initial_dataset_Images = os.path.join(args.source, 'data', args.patch_level,'Images')
+    initial_dataset_Masks = os.path.join(args.source, 'data', args.patch_level,'Masks')
     
     list_paths_img, list_names = read_folder(initial_dataset_Images)
     list_paths_masks, _ = read_folder(initial_dataset_Masks)
