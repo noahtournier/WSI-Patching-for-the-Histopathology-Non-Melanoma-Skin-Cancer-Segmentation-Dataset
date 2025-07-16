@@ -32,7 +32,7 @@ DATA_DIRECTORY/
 ```
 python wsi_patching.py --source DATA_DIRECTORY --save_dir RESULTS_DIRECTORY --patch_size 256 --cancer_priority True --patch_level 1x
 ```
-The above command segments every WSI in DATA_DIRECTORY into patches of size (256×256). It also segments the corresponding mask for each WSI into patches and generates a `.json` file containing the annotations for each patch.\
+The above command segments every WSI in DATA_DIRECTORY into patches of size (256×256). If necessary, it pads each image to ensure its dimensions are multiples of the patch size. It also segments the corresponding mask for each WSI into patches and generates a `.json` file containing the annotations for each patch.\
 Finally it will generate the following folder structure at the specified RESULTS_DIRECTORY :
 ```
 RESULTS_DIRECTORY/
