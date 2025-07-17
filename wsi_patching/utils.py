@@ -50,7 +50,7 @@ def read_folder(folder_path):
     list_path = []
     list_name = []
     
-    for file_name in os.listdir(folder_path):
+    for file_name in sorted(os.listdir(folder_path)):
         file_path = os.path.join(folder_path, file_name)
         list_path.append(file_path)
         list_name.append(os.path.splitext(file_name)[0])
