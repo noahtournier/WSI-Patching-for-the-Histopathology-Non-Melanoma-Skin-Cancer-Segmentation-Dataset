@@ -17,11 +17,11 @@ def get_arguments():
     parser.add_argument('--save_dir', type=str, default='path/to/RESULTS_DIRECTORY', help='name of the new folder')
     
     # Main arguments
-    parser.add_argument('--keep_background', type=bool, default=False, help='Keep the background of the WSI (patches where there is only black/white)')
-    parser.add_argument('--keep_mask', type=bool, default=False, help='Keep the folder with mask patches')
+    parser.add_argument('--keep_background', type=bool, default=False, help='Boolean flag indicating whether to include background patches in the output.')
+    parser.add_argument('--keep_mask', type=bool, default=False, help='Boolean flag to save a separate directory containing the corresponding mask patches.')
     parser.add_argument('--patch_size', type=int, default=256, help='Size of the patches in px')
-    parser.add_argument('--cancer_priority', type=bool, default=True, help='In a patch with a cancer and other classes, prioritizing the cancer class over the others')
-    parser.add_argument('--patch_level', type=str, default='1x', choices=['1x','2x','5x','10x'])
+    parser.add_argument('--cancer_priority', type=bool, default=True, help='When enabled, prioritizes cancer classes in the labeling of patches containing multiple classes')
+    parser.add_argument('--patch_level', type=str, default='1x', choices=['1x','2x','5x','10x'], help='Sets the resolution level of the patches (options: 1x, 2x, 5x, or 10x).')
     
     args = parser.parse_args()
     
